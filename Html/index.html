@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD-APP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="container-header">
+        <div class="filterEntries">
+          <div class="entries">
+            Show
+            <select name="" id="table_size">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+            entries
+          </div>
+          <div class="filter">
+            <label for="search">Search:</label>
+            <input
+              type="search"
+              class="input-field"
+              id="search"
+              placeholder="Enter Name/City/Position "
+            />
+          </div>
+        </div>
+        <div class="add-member">
+          <button class="add-member-btn">New member</button>
+        </div>
+      </header>
+
+      <table>
+        <thead>
+          <tr class="heading" style="color: aliceblue">
+            <th>SL No</th>
+            <th>Picture</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Start Date</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <script src="../JavaScript/main.js"></script>
+  </body>
+</html>
