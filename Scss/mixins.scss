@@ -1,0 +1,17 @@
+@mixin flex-box($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin input-design($className) {
+    .#{$className} {
+        padding: 7px 10px;
+        border: 1px solid var(--dark6);
+        color: $color_1;
+        background-color: $background-color_1;
+        border-radius: 5px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+}

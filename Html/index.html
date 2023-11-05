@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../StyleSheet/main.css" />
   </head>
   <body>
     <div class="container">
@@ -16,7 +16,7 @@
         <div class="filterEntries">
           <div class="entries">
             Show
-            <select name="" id="table_size">
+            <select name="" id="table_size" class="table-size">
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="50">50</option>
@@ -35,11 +35,10 @@
           </div>
         </div>
         <div class="add-member">
-          <button class="add-member-btn">New member</button>
+          <button class="add-member-btn">Add Employee</button>
         </div>
       </header>
-
-      <table>
+      <table class="employee-table">
         <thead>
           <tr class="heading" style="color: aliceblue">
             <th>SL No</th>
@@ -55,9 +54,149 @@
             <th>Action</th>
           </tr>
         </thead>
+        <tbody class="userInfo">
+          <!-- <tr><td class="empty" colspan="11">No data available in table</td></tr> -->
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="../Images/pic1.png" alt="" width="40" height="40" />
+            </td>
+            <td>Elvin Sarkarov</td>
+            <td>20</td>
+            <td>Azerbaijan</td>
+            <td>Front-End Developer</td>
+            <td>$2500</td>
+            <td>03-08-2018</td>
+            <td>elvin@gmail.com</td>
+            <td>924157812</td>
+            <td>
+              <button><i class="fa-regular fa-eye"></i></button>
+              <button><i class="fa-regular fa-pen-to-square"></i></button>
+              <button><i class="fa-regular fa-trash-can"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="../Images/pic1.png" alt="" width="40" height="40" />
+            </td>
+            <td>Shahin Ismailov</td>
+            <td>25</td>
+            <td>Azerbaijan</td>
+            <td>Back-End Developer</td>
+            <td>$2900</td>
+            <td>07-02-2018</td>
+            <td>shahin@gmail.com</td>
+            <td>924157812</td>
+            <td>
+              <button><i class="fa-regular fa-eye"></i></button>
+              <button><i class="fa-regular fa-pen-to-square"></i></button>
+              <button><i class="fa-regular fa-trash-can"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="../Images/pic1.png" alt="" width="40" height="40" />
+            </td>
+            <td>Mahabbat Zekeriyayev</td>
+            <td>22</td>
+            <td>Azerbaijan</td>
+            <td>Mobile Developer</td>
+            <td>$3000</td>
+            <td>03-08-2020</td>
+            <td>mahabbat@gmail.com</td>
+            <td>924157812</td>
+            <td>
+              <button><i class="fa-regular fa-eye"></i></button>
+              <button><i class="fa-regular fa-pen-to-square"></i></button>
+              <button><i class="fa-regular fa-trash-can"></i></button>
+            </td>
+          </tr>
+        </tbody>
       </table>
+      <footer class="footer">
+        <span>Showing 1 to 10 of 50 entries</span>
+        <div class="pagination">
+          <button class="dot">Prev</button>
+          <button class="dot active">1</button>
+          <button class="dot">2</button>
+          <button class="dot">3</button>
+          <button class="dot">4</button>
+          <button class="dot">5</button>
+          <button class="dot">Next</button>
+        </div>
+      </footer>
     </div>
+    <div class="dark-bg">
+      <div class="popup">
+        <header class="popup-head">
+          <h1 class="popup-head-title">Fill The Form</h1>
+          <button class="close">&times;</button>
+        </header>
 
+        <div class="popup-body">
+          <form action="#">
+            <div class="imgholder">
+              <label for="uploadImg">
+                <input type="file" name="" id="uploadImg" class="picture">
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <img src="../Images/pic1.png" alt="" class="img" width="150" height="150">
+            </div>
+
+            <div class="inputFieldContainer">
+              <div class="NameField">
+                <div class="form-control">
+                  <label for="fName">First Name</label>
+                  <input type="text" id="fName" name="" required>
+                </div>
+                <div class="form-control">
+                  <label for="lName">Last Name</label>
+                  <input type="text" id="lName" name="" required>
+                </div>
+              </div>
+              <div class="ageCityField">
+                <div class="form-control">
+                  <label for="age">Age</label>
+                  <input type="number" id="age" name="" required>
+                </div>
+
+                <div class="form-control">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="" required>
+                </div>
+              </div>
+
+              <div class="postSalary">
+                <div class="form-control">
+                  <label for="position">Position</label>
+                  <input type="text" id="position" name="" required>
+                </div>
+                <div class="form-control">
+                  <label for="salary">Salary</label>
+                  <input type="number" id="salary" name="" required>
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="sDate">Start Date</label>
+                <input type="date" id="sDate" name="" required>
+              </div>
+
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="" required>
+              </div>
+
+              <div class="form-control">
+                <label for="phone">Email</label>
+                <input type="number" id="phone" name="" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="../JavaScript/main.js"></script>
   </body>
 </html>
