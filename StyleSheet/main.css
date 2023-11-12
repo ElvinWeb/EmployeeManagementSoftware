@@ -26,6 +26,7 @@
   --dark8: #dae0e7;
   --dark9: #262a2e;
   --red1: #902e31;
+  --white1: #fff;
 }
 
 body {
@@ -107,6 +108,11 @@ body {
   background-color: var(--dark4);
 }
 
+.filterEntries {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .filterEntries .entries {
   color: var(--dark8);
 }
@@ -119,16 +125,11 @@ body {
   transition: all 0.3s;
   cursor: pointer;
 }
-.filterEntries .filter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.filterEntries .filter label {
+.filterEntries label {
   color: var(--dark8);
   margin: 0 5px;
 }
-.filterEntries .filter .input-field {
+.filterEntries .input-field {
   padding: 7px 10px;
   border: 1px solid var(--dark6);
   color: var(--dark8);
@@ -137,11 +138,11 @@ body {
   transition: all 0.3s;
   cursor: pointer;
 }
-.filterEntries .filter .input-field:focus {
+.filterEntries .input-field:focus {
   border-color: var(--dark7) !important;
 }
 
-.add-member-btn, .dark-bg .popup-head .close {
+.add-member-btn, .dark-bg .popup .submit-btn, .dark-bg .popup-head .close {
   padding: 9px 14px;
   color: var(--dark8);
   background: transparent;
@@ -153,7 +154,7 @@ body {
   border-radius: 5px;
   transition: all 0.3s;
 }
-.add-member-btn:hover, .dark-bg .popup-head .close:hover {
+.add-member-btn:hover, .dark-bg .popup .submit-btn:hover, .dark-bg .popup-head .close:hover {
   background-color: var(--dark5);
 }
 
@@ -193,6 +194,12 @@ body {
   border-radius: 0 5px 5px 0;
 }
 
+.active {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
 .dark-bg {
   position: fixed;
   top: 0;
@@ -203,6 +210,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
 }
 .dark-bg .popup {
   border-radius: 5px;
@@ -212,6 +221,8 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .dark-bg .popup-head {
   display: flex;
@@ -227,4 +238,89 @@ body {
   font-size: 30px;
   font-weight: 300;
   padding: 0 15px;
+}
+.dark-bg .popup-head .close:hover {
+  border-color: var(--dark7);
+  transition: all 0.3s;
+}
+.dark-bg .popup footer {
+  border-top: 1px solid var(--dark7);
+  padding: 12px 20px;
+  text-align: right;
+}
+.dark-bg .popup form {
+  padding: 10px 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.dark-bg .popup .submit-btn:hover {
+  transition: all 0.3s;
+  border-color: var(--dark7);
+}
+.dark-bg .popup .img-holder {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 50px;
+  margin-top: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.dark-bg .popup .img-holder .upload {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.dark-bg .popup .img-holder .upload i {
+  color: var(--white1);
+  font-size: 45px;
+  font-weight: 400;
+}
+.dark-bg .popup .img-holder .upload input {
+  display: none;
+}
+.dark-bg .popup .img-holder .img {
+  width: 100%;
+  height: 100%;
+}
+.dark-bg .popup .img-holder:hover .upload {
+  display: flex;
+  transition: all 0.3s;
+}
+.dark-bg .popup .inputFieldContainer .form-control-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.dark-bg .popup .inputFieldContainer .form-control-group input {
+  width: 200px;
+}
+.dark-bg .popup .inputFieldContainer .form-control {
+  margin: 10px 0;
+}
+.dark-bg .popup .inputFieldContainer .form-control label {
+  display: block;
+  color: var(--dark8);
+  margin-bottom: 5px;
+}
+.dark-bg .popup .inputFieldContainer .form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--dark6);
+  color: var(--dark8);
+  background: var(--dark4);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.dark-bg .popup .inputFieldContainer .form-control input:hover, .dark-bg .popup .inputFieldContainer .form-control input:valid {
+  border-color: var(--dark7);
 }/*# sourceMappingURL=main.css.map */

@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRUD-APP</title>
+    <title>JSCrud-App</title>
+    <link
+      rel="icon"
+      href="../Images/app-logo-transparent.png"
+      type="image/x-icon"
+      width="30"
+      height="30"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -136,65 +143,74 @@
         </header>
 
         <div class="popup-body">
-          <form action="#">
-            <div class="imgholder">
-              <label for="uploadImg">
-                <input type="file" name="" id="uploadImg" class="picture">
+          <form action="#" id="myForm">
+            <div class="img-holder">
+              <label for="uploadImg" class="upload">
+                <input type="file" name="" id="uploadImg" class="picture" />
                 <i class="fa-solid fa-plus"></i>
               </label>
-              <img src="../Images/pic1.png" alt="" class="img" width="150" height="150">
+              <img
+                src="../Images/pic1.png"
+                alt=""
+                class="img"
+                width="150"
+                height="150"
+              />
             </div>
 
             <div class="inputFieldContainer">
-              <div class="NameField">
+              <div class="nameField form-control-group">
                 <div class="form-control">
                   <label for="fName">First Name</label>
-                  <input type="text" id="fName" name="" required>
+                  <input type="text" id="fName" name="" required />
                 </div>
                 <div class="form-control">
                   <label for="lName">Last Name</label>
-                  <input type="text" id="lName" name="" required>
+                  <input type="text" id="lName" name="" required />
                 </div>
               </div>
-              <div class="ageCityField">
+              <div class="ageCityField form-control-group">
                 <div class="form-control">
                   <label for="age">Age</label>
-                  <input type="number" id="age" name="" required>
+                  <input type="number" id="age" name="" required />
                 </div>
 
                 <div class="form-control">
                   <label for="city">City</label>
-                  <input type="text" id="city" name="" required>
+                  <input type="text" id="city" name="" required />
                 </div>
               </div>
 
-              <div class="postSalary">
+              <div class="postSalary form-control-group">
                 <div class="form-control">
                   <label for="position">Position</label>
-                  <input type="text" id="position" name="" required>
+                  <input type="text" id="position" name="" required />
                 </div>
                 <div class="form-control">
                   <label for="salary">Salary</label>
-                  <input type="number" id="salary" name="" required>
+                  <input type="number" id="salary" name="" required />
                 </div>
               </div>
               <div class="form-control">
                 <label for="sDate">Start Date</label>
-                <input type="date" id="sDate" name="" required>
+                <input type="date" id="sDate" name="" required />
               </div>
 
               <div class="form-control">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="" required>
+                <input type="email" id="email" name="" required />
               </div>
 
               <div class="form-control">
                 <label for="phone">Email</label>
-                <input type="number" id="phone" name="" required>
+                <input type="number" id="phone" name="" required />
               </div>
             </div>
           </form>
         </div>
+        <footer>
+          <button class="submit-btn" type="submit">Submit</button>
+        </footer>
       </div>
     </div>
     <script src="../JavaScript/main.js"></script>
